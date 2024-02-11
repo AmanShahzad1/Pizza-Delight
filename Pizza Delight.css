@@ -1,0 +1,319 @@
+header{
+    background-color: rgb(255, 77, 77);
+    color: white;
+    display: flex;
+}
+
+.logo{
+    margin-left: 40px;
+    display: flex;
+}
+
+
+.fire{
+    width: 60px;
+    height: 60px;
+    position:relative;
+    transform-origin:center bottom;
+    animation-name: flame;
+    animation-duration:3ms;
+    animation-delay:200ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes flame{
+    0%   {transform: rotate(-1deg);}
+    20%  {transform: rotate(1deg);}
+    40%  {transform: rotate(-1deg);}
+    60%  {transform: rotate(1deg) scaleY(1.04);}
+    80%  {transform: rotate(-2deg) scaleY(0.92);}
+    100% {transform: rotate(1deg);}
+  }
+
+.yellow_flame{
+    left:15px; 
+    width: 30px;
+    height: 30px;
+    background:gold;
+    box-shadow: 0px 0px 9px 4px gold;
+    bottom:0;
+    position:absolute;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    transform:rotate(-45deg) scale(1.5,1.5);
+}
+.white_flame{
+    left:18px; 
+    bottom:-4px;
+    width: 25px;
+    height: 25px;
+    background:white;
+    box-shadow: 0px 0px 9px 4px white;
+    bottom:0;
+    position:absolute;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    transform:rotate(-45deg) scale(1.5,1.5);
+  }
+
+.blue_flame{
+    width: 10px;
+    height: 10px;
+    left:25px;
+    bottom:-25px; 
+    background: SlateBlue;
+    box-shadow: 0px 0px 7px 3px SlateBlue;
+    bottom:0;
+    position:absolute;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    transform:rotate(-45deg) scale(1.5,1.5);
+}
+
+.options{
+    flex: 1;
+    text-align: right;
+    align-items: center;
+    cursor: pointer;
+}
+
+#cart{
+    margin-right: 40px;
+    margin-top: 20px;
+    width: 3%;
+}
+
+
+
+
+
+.slider{
+    margin: auto;
+    width: 1500px;
+    height: 700px;
+    background-color: black;
+    background: url(p1.jpeg);
+    background-size: 100%;
+    animation-name: slides;
+    animation-duration: 20s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slides{
+        0%{
+            margin-left: -100px;
+            background: url(p2.jpeg);
+            position: relative;
+            background-size: 100%;
+        }
+        25%{
+            margin-left: 0px;
+            background: url(p2.jpeg);
+            position: relative;  
+            background-size: 100%;
+        }
+        50%{
+            margin-left: -100px;
+            background: url(p1.jpeg);
+            position: relative;
+            background-size: 100%;
+        }
+        75%{
+            margin-left: 0px;
+            background: url(p1.jpeg);
+            position: relative;  
+            background-size: 100%;
+        }
+    
+}
+
+
+.menu{
+    display: flex;
+    align-items: center;
+
+}
+.opt1{
+    margin-right: auto;
+    padding: 20px;
+    border-color: black;
+    width: 20%;
+    margin-left: 120px;
+    margin-right: 120px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.24);
+}
+
+.opt2{
+    margin-right: auto;
+    padding: 20px;
+    border-color: black;
+    width: 20%;
+    margin: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.24);
+}
+
+.opt3{
+    margin-right: auto;
+    padding: 20px;
+    border-color: black;
+    width: 20%;
+    margin-left: 120px;
+    margin-right: 120px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.24);
+}
+.container{
+    padding: 12px;
+    text-align: center;
+    margin: auto;
+}
+
+img{
+    width: 100%;
+}
+
+.opt1:hover{
+    animation-name: move1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move1{
+    100% {transform: rotate(360deg);}
+}
+
+.opt3:hover{
+    animation-name: move3;
+    animation-duration: 3s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes move3{
+    100% {transform: rotate(-360deg);}
+}
+
+.opt2:hover{
+    animation-name: move2;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes move2{
+    50% {transform: rotateY(360deg);}
+}
+
+.reviews{
+    flex:1;
+    align-items: center;
+    text-align: center;
+}
+
+#comments{
+    color: rgb(106, 105, 105);
+}
+
+#order{
+    padding: 12px;
+    background-color: rgb(74, 191, 74);
+    color: white;
+    border-radius: 10px;
+}
+
+#order:hover{
+    animation-name: order_button ;
+    animation-duration: 3s;
+    cursor: pointer;
+}
+
+@keyframes order_button{
+    100%{
+        background-color: red;
+    }
+}
+
+
+.quality{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.24);
+    height: 100px;
+    position: relative;
+}
+
+.custom{
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.24);
+    height: 100px;
+    position: relative;
+}
+
+.delivery{
+    margin-top: 10px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    padding: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.24);
+    height: 100px;
+    position: relative;
+}
+
+
+form {
+    background-color: white;
+    text-align: center; 
+    display: inline-block; 
+    margin:auto; 
+    position: absolute;
+    left: 35%;
+}
+
+#f_text {
+    color: rgb(116, 114, 114);
+    margin-left: 10%;
+    margin-right: auto;
+    text-align: left;
+    font-size: large;
+
+}
+
+input{
+    margin: auto;
+    padding: 10px;
+    width:80%
+}
+
+textarea{
+    margin: auto;
+    width: 80%;
+}
+
+#f_button{
+    background-color: rgb(65, 137, 65);
+    color: white;
+    padding: 12px;
+    text-align: center;
+    margin: 10px;
+    width: 80%;
+    border-radius: 10px; 
+    cursor: pointer;
+}
+
+footer{
+    margin-top: 750px;
+    background-color: rgb(255, 77, 77);
+    color: white;
+    padding: 60px;
+    text-align: center;
+}
